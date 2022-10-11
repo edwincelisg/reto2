@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html lang ="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">    
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Mensajes</title>
+	<link href="css/style.css" rel="stylesheet">
+	<script  src="js/functionM.js"></script>
+	<script src="https://code.jquery.com/jquery-3.6.1.js" 
+	integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" 
+	crossorigin="anonymous">
+	</script>
+</head>
+	
+<body>
+	<center>
+		<h1>Registro De Mensajes</h1>
+		<hr style="width: 500px;"> 
+		<br>
+		<fieldset style="width: 600px;">
+		<legend>Informacion Tabla Mensajes:</legend>
+		<table border="0">	
+		
+			<tr>
+				<th><span style="color:blue;"><b>ID:</b></th>
+				<td>			
+					<input type="number" id="codigom" style="width: 55%;" placeholder="Ingresa un ID">
+					<input type="button" id="btnBuscarID" value="Buscar ID" onclick="consultaID('#id')">
+				</td>	
+			</tr>
+	 
+			<tr>
+				<th><span style="color: blue; align"><b>Mensaje:</b></th>
+				<td>
+					<input type="text" id="message_text" style="width: 95%;" placeholder="Ingresa un mensaje">		
+				</td>	
+			</tr>
+		</table>	
+			<br><br>
+		
+			<tr>
+				<td colspan="4">&nbsp;</td>
+					<input type="button" id="btnLimpiar" value="Limpiar datos" onclick="limpiar_formulario()">
+						&nbsp;&nbsp;
+					<input type="button" id="btnBuscarALL"  value="Mostrar Todos" onclick="consultar_todo()">
+						&nbsp;&nbsp;
+					<input type="button" id="btnAgregarALL"  value="Agregar Registro" onclick="guardarInformacion()">
+						&nbsp;&nbsp;
+					<input type="button" id="btnBuscarID" value="Actualizar Registro" onclick="editar_Informacion()"> 
+				<br><br>
+			</tr>
+			
+			
+			</fieldset>
+			<hr style="height:2px; border-width:0;background-color:blue">
+			<h2>RESULTADO:</h2>
+			<hr style="width: 800px;">
+			<div id="resultado"></div>
+			<br><br>
+			<hr style="width: 800px;">
+			<a href="index.html" title="Regresar la Menu Principal">Regresar Menu Inicio</a>
+	</center>		
+	
+</body>
+
+</html>
